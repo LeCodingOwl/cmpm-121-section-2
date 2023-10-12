@@ -13,21 +13,21 @@ SetText("click to start!");
 let isJumping = false;
 let gameOver = true;
 
-document.addEventListener('click', () => jump());
+document.addEventListener('mousedown', () => jump());
 
 
-setInterval(function() { Main()}, 10);
-
+//setInterval(function() { Main()}, 10);
+(Main)
 function Main()
 {
-    checkGameOver()
-
     if(gameOver == false)
     {
         score++;
         SetText("Score: " + score);
+        checkGameOver()
+    }
 
-    };
+    requestAnimationFrame(Main);
 }
 
 function jump()
