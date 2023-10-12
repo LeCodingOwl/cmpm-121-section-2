@@ -23,9 +23,6 @@ function Main()
 {
     if(gameOver == false)
     {
-        score = score + 1;
-        SetText("Score: " + score)
-
         checkGameOver()
     }
 }
